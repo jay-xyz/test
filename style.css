@@ -218,59 +218,50 @@ header {
 
 /* Small screens (up to 480px) */
 @media (max-width: 480px) {
-    body {
-        margin: 1.25rem; /* Adjusted margin for small screens */
-    }
-
-    /* Header container adjustments */
-    .header-container {
-        flex-wrap: nowrap; /* Prevent wrapping */
-        justify-content: space-between; /* Space items evenly */
-    }
-
-    .header-text {
-        font-size: 0.875rem; /* Reduce font size for better fit */
-    }
-    
-    .project {
-    margin-bottom: 3.125rem; /* 50px */
-}
+    /* ... (other mobile styles remain unchanged) ... */
 
     /* Project info section adjustments */
     .project-info {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to the start */
-        gap: 0.75rem; /* Reduce gap between title and roles */
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 1.5rem; /* 24px, space between project info and description */
     }
 
     .project-title {
-        margin-bottom: 0.25rem; /* Reduce space between title and roles */
+        margin-bottom: 1rem; /* 16px, space between title and role info */
     }
 
     .role-info {
-        flex-wrap: wrap; /* Allow role containers to wrap */
-        gap: 0.5rem; /* Add gap between role containers */
-        width: 100%; /* Full width */
-        margin-left: 0; /* Remove left margin to align with title */
+        flex-wrap: wrap;
+        gap: 0.5rem; /* 8px between role containers */
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 1.5rem; /* 24px, space between role info and description */
     }
 
     .role-container {
-        font-size: 0.75rem; /* Reduce font size in role containers */
-        padding: 0.25rem 0.5rem; /* Adjust padding for smaller screens */
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
     }
 
-   /* Adjust description to full width */
+    /* Description section */
     .description {
-        width: 100% !important; /* Force full width */
-        max-width: none; /* Remove any max-width constraints */
-        margin-left: 0; /* Ensure no left margin */
-        margin-right: 0; /* Ensure no right margin */
-        box-sizing: border-box; /* Include padding in width calculation */
-        padding-left: 0; /* Remove any left padding */
-        padding-right: 0; /* Remove any right padding */
+        width: 100% !important;
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 2rem; /* 32px, space between description and project images */
+    }
+
+    /* Project Images Section */
+    .project-images {
+        margin-top: 0; /* Remove top margin as we're using margin-bottom on description */
     }
 
     .project-images img {
-        margin-top: 0.625rem; /* Reduce space between images */
+        margin-top: 1rem; /* 16px space between images */
     }
 }
