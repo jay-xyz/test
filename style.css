@@ -163,7 +163,7 @@ header {
 
 /* Description Section */
 .description {
-    width: 50%; /* 50% width */
+    width: 50%; /* 50% width for desktop */
     margin: 1.25rem 0; /* 20px */
     font-size: 0.875rem; /* 14px */
 }
@@ -196,10 +196,24 @@ header {
 /* Medium screens (up to 768px) */
 @media (max-width: 768px) {
     body {
-        margin: 2.5rem 3.125rem; /* Further adjusted margin for medium screens */
+        margin: 2.5rem 3.125rem; /* Adjusted margin for medium screens */
     }
     
-    /* Keep other styles similar to desktop */
+    /* Project info section adjustments */
+    .project-info {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        gap: 1rem; /* Add gap between title and roles */
+    }
+
+    .project-title {
+        margin-bottom: 0.5rem; /* Add space between title and roles */
+    }
+
+    .role-info {
+        margin-left: 0; /* Remove left margin to align with title */
+        width: 100%; /* Full width */
+    }
 }
 
 /* Small screens (up to 480px) */
@@ -222,15 +236,18 @@ header {
     .project-info {
         flex-direction: column; /* Stack items vertically */
         align-items: flex-start; /* Align items to the start */
+        gap: 0.75rem; /* Reduce gap between title and roles */
     }
 
     .project-title {
-        margin-bottom: 0.625rem; /* Add space between title and roles */
+        margin-bottom: 0.25rem; /* Reduce space between title and roles */
     }
 
     .role-info {
         flex-wrap: wrap; /* Allow role containers to wrap */
         gap: 0.5rem; /* Add gap between role containers */
+        width: 100%; /* Full width */
+        margin-left: 0; /* Remove left margin to align with title */
     }
 
     .role-container {
@@ -238,9 +255,15 @@ header {
         padding: 0.25rem 0.5rem; /* Adjust padding for smaller screens */
     }
 
-    /* Adjust description and image sizes */
+   /* Adjust description to full width */
     .description {
-        width: 100%; /* Full width on small screens */
+        width: 100% !important; /* Force full width */
+        max-width: none; /* Remove any max-width constraints */
+        margin-left: 0; /* Ensure no left margin */
+        margin-right: 0; /* Ensure no right margin */
+        box-sizing: border-box; /* Include padding in width calculation */
+        padding-left: 0; /* Remove any left padding */
+        padding-right: 0; /* Remove any right padding */
     }
 
     .project-images img {
