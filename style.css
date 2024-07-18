@@ -219,7 +219,7 @@ header {
 /* Small screens (up to 480px) */
 @media (max-width: 480px) {
     body {
-        margin: 1.5rem; /* Adjusted margin for small screens */
+        margin: 1rem; /* Adjusted margin for small screens */
     }
 
     /* Header container adjustments */
