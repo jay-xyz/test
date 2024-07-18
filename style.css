@@ -1,69 +1,69 @@
 /* Reset and General Styles */
 * {
-    box-sizing: border-box; /* Box model includes padding and border in element's total width and height */
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 html {
-    font-size: 16px; /* Base font size for easier rem calculations */
+    font-size: 16px;
 }
 
 body {
-    margin: 2.5rem 12.5rem; /* Margin adjusted for desktop */
+    margin: 2.5rem 12.5rem;
     padding: 0;
-    font-family: 'Manrope', sans-serif; /* Font family for the entire page */
+    font-family: 'Manrope', sans-serif;
 }
 
 /* Hyperlink Styles */
 a {
-    text-decoration: none; /* Remove default underline */
-    color: inherit; /* Inherit text color */
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Heading Styles */
 h1, h2, h3 {
-    font-size: 2rem; /* 32px */
+    font-size: 2rem;
     font-weight: normal;
-    margin: 0; /* Remove default margins */
+    margin: 0;
 }
 
 h1 .designer {
-    color: rgba(0, 0, 0, 0.3); /* Subdued color for designer text */
+    color: rgba(0, 0, 0, 0.3);
 }
 
 h1 .arrow {
-    color: #2480ed; /* Color for arrow icon */
+    color: #2480ed;
 }
 
 h2, h3 {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem;
 }
 
 /* Header Styles */
 header {
-    background-color: white; /* Background color */
-    margin-bottom: 3.125rem; /* 50px */
+    background-color: white;
+    margin-bottom: 3.125rem;
 }
 
 .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Allow wrapping for small screens */
+    flex-wrap: wrap;
 }
 
 .avi {
-    width: 3.5rem; /* 56px */
-    height: 3.5rem; /* 56px */
+    width: 3.5rem;
+    height: 3.5rem;
     position: relative;
 }
 
 /* Pulsating Dot Animation */
 .pulsating-dot {
-    width: 1.75rem; /* 28px */
-    height: 1.75rem; /* 28px */
-    background-color: #133dd7; /* Pulsating dot color */
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: #133dd7;
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -73,10 +73,10 @@ header {
 
 .pulse {
     position: absolute;
-    width: 3.5rem; /* 56px */
-    height: 3.5rem; /* 56px */
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
-    background-color: #133dd7; /* Pulsing animation color */
+    background-color: #133dd7;
     opacity: 0;
     top: 50%;
     left: 50%;
@@ -106,35 +106,35 @@ header {
 .header-text {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Allow wrapping for small screens */
+    flex-wrap: wrap;
 }
 
 .header-text span {
-    margin-right: 1.25rem; /* 20px */
-    font-size: 1rem; /* 16px */
+    margin-right: 1.25rem;
+    font-size: 1rem;
 }
 
 /* Hero Section */
 .hero-container {
-    margin-bottom: 3.125rem; /* 50px */
+    margin-bottom: 3.125rem;
 }
 
 .welcome, .nav {
-    line-height: 1.5; /* Line height */
+    line-height: 1.5;
 }
 
 /* Project Section */
 .project {
-    margin-bottom: 6.25rem; /* 100px */
+    margin-bottom: 6.25rem;
 }
 
 /* Project Info Section */
 .project-info {
     display: flex;
-    justify-content: space-between; /* Space items evenly */
-    align-items: center; /* Center align items vertically */
-    flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
-    gap: 2em; /* Gap between elements */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 2em;
 }
 
 .project-title {
@@ -142,44 +142,44 @@ header {
 }
 
 .role-info {
-    display: flex; /* Flex layout */
-    gap: 1em; /* Gap between role containers */
-    margin-left: auto; /* Push to right edge */
-    color: rgba(0, 0, 0, 0.3); /* Subdued color */
+    display: flex;
+    gap: 1em;
+    margin-left: auto;
+    color: rgba(0, 0, 0, 0.3);
 }
 
 /* Role Container Styles */
 .role-container {
-    background-color: #f1f4f7; /* Background color */
-    border-radius: 0.3125rem; /* 5px */
-    padding: 0.3125rem 0.625rem; /* 5px 10px */
-    display: inline-block; /* Inline block display */
+    background-color: #f1f4f7;
+    border-radius: 0.3125rem;
+    padding: 0.3125rem 0.625rem;
+    display: inline-block;
 }
 
 .role-container span {
-    font-size: 0.875rem; /* 14px */
-    color: #2480ed; /* Role container text color */
+    font-size: 0.875rem;
+    color: #2480ed;
 }
 
 /* Description Section */
 .description {
-    width: 50%; /* 50% width for desktop */
-    margin: 1.25rem 0; /* 20px */
-    font-size: 0.875rem; /* 14px */
+    width: 50%;
+    margin: 1.25rem 0;
+    font-size: 0.875rem;
 }
 
 /* Project Images Section */
 .project-images {
-    display: flex; /* Flex layout */
-    flex-direction: column; /* Column direction */
-    gap: 1em; /* Gap between images */
-    margin-top: 1.25rem; /* 20px */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1.25rem;
 }
 
 .project-images img {
-    max-width: 100%; /* Maximum width */
-    height: auto; /* Auto height */
-    margin-top: 1.25rem; /* 20px */
+    max-width: 100%;
+    height: auto;
+    margin-top: 1.25rem;
 }
 
 /* Media Queries for Responsiveness */
@@ -187,58 +187,66 @@ header {
 /* Large screens (up to 1200px) */
 @media (max-width: 1200px) {
     body {
-        margin: 2.5rem 6.25rem; /* Adjusted margin for large screens */
+        margin: 2.5rem 6.25rem;
     }
-    
-    /* Keep other styles similar to desktop */
 }
 
 /* Medium screens (up to 768px) */
 @media (max-width: 768px) {
     body {
-        margin: 2.5rem 3.125rem; /* Adjusted margin for medium screens */
+        margin: 2.5rem 3.125rem;
     }
     
     /* Project info section adjustments */
     .project-info {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to the start */
-        gap: 1rem; /* Add gap between title and roles */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
     }
 
     .project-title {
-        margin-bottom: 0.5rem; /* Add space between title and roles */
+        margin-bottom: 0.5rem;
     }
 
     .role-info {
-        margin-left: 0; /* Remove left margin to align with title */
-        width: 100%; /* Full width */
+        margin-left: 0;
+        width: 100%;
     }
 }
 
 /* Small screens (up to 480px) */
 @media (max-width: 480px) {
-    .project {
-    margin-bottom: 3.125rem; /* 50px */
-}
+    body {
+        margin: 1.25rem;
+    }
+
+    /* Header container adjustments */
+    .header-container {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .header-text {
+        font-size: 0.875rem;
+    }
 
     /* Project info section adjustments */
     .project-info {
         flex-direction: column;
         align-items: flex-start;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .project-title {
-        margin-bottom: 1rem; /* 16px, space between title and role info */
+        margin-bottom: 1rem;
     }
 
     .role-info {
         flex-wrap: wrap;
-        gap: 0.5rem; /* 8px between role containers */
+        gap: 0.5rem;
         width: 100%;
         margin-left: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .role-container {
@@ -255,16 +263,15 @@ header {
         box-sizing: border-box;
         padding-left: 0;
         padding-right: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     /* Project Images Section */
     .project-images {
-        margin-top: 0; /* Remove top margin as we're using margin-bottom on description */
+        margin-top: 0;
     }
 
     .project-images img {
-        margin-top: 1rem; /* 16px space between images */
+        margin-top: 1rem;
     }
 }
-            
