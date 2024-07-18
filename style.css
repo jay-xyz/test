@@ -218,13 +218,15 @@ header {
 
 /* Small screens (up to 480px) */
 @media (max-width: 480px) {
-    /* ... (other mobile styles remain unchanged) ... */
+    .project {
+    margin-bottom: 3.125rem; /* 50px */
+}
 
     /* Project info section adjustments */
     .project-info {
         flex-direction: column;
         align-items: flex-start;
-        margin-bottom: 1.5rem; /* 24px, space between project info and description */
+        margin-bottom: 1rem;
     }
 
     .project-title {
@@ -236,7 +238,7 @@ header {
         gap: 0.5rem; /* 8px between role containers */
         width: 100%;
         margin-left: 0;
-        margin-bottom: 1.5rem; /* 24px, space between role info and description */
+        margin-bottom: 1rem;
     }
 
     .role-container {
@@ -253,7 +255,7 @@ header {
         box-sizing: border-box;
         padding-left: 0;
         padding-right: 0;
-        margin-bottom: 2rem; /* 32px, space between description and project images */
+        margin-bottom: 1rem;
     }
 
     /* Project Images Section */
@@ -265,3 +267,4 @@ header {
         margin-top: 1rem; /* 16px space between images */
     }
 }
+            
