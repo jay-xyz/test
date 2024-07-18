@@ -1,189 +1,84 @@
 /* Reset and General Styles */
 * {
-    box-sizing: border-box; /* Box model includes padding and border in element's total width and height */
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 html {
-    font-size: 16px; /* Base font size for easier rem calculations */
+    font-size: 16px;
 }
 
 body {
     margin: 2.5rem 12.5rem; /* Margin adjusted for desktop */
     padding: 0;
-    font-family: 'Manrope', sans-serif; /* Font family for the entire page */
+    font-family: 'Manrope', sans-serif;
 }
 
-/* Hyperlink Styles */
-a {
-    text-decoration: none; /* Remove default underline */
-    color: inherit; /* Inherit text color */
-}
+/* (Your existing CSS code here...) */
 
-/* Heading Styles */
-h1, h2, h3 {
-    font-size: 2rem; /* 32px */
-    font-weight: normal;
-    margin: 0; /* Remove default margins */
-}
+/* Media Queries for Responsiveness */
 
-h1 .designer {
-    color: rgba(0, 0, 0, 0.3); /* Subdued color for designer text */
-}
-
-h1 .arrow {
-    color: #2480ed; /* Color for arrow icon */
-}
-
-h2, h3 {
-    font-size: 1rem; /* 16px */
-}
-
-/* Header Styles */
-header {
-    background-color: white; /* Background color */
-    margin-bottom: 3.125rem; /* 50px */
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Allow wrapping for small screens */
-}
-
-.avi {
-    width: 3.5rem; /* 56px */
-    height: 3.5rem; /* 56px */
-    position: relative;
-}
-
-/* Pulsating Dot Animation */
-.pulsating-dot {
-    width: 1.75rem; /* 28px */
-    height: 1.75rem; /* 28px */
-    background-color: #133dd7; /* Pulsating dot color */
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.pulse {
-    position: absolute;
-    width: 3.5rem; /* 56px */
-    height: 3.5rem; /* 56px */
-    border-radius: 50%;
-    background-color: #133dd7; /* Pulsing animation color */
-    opacity: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.5);
-    animation: pulse 2s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.pulse:nth-child(2) {
-    animation-delay: -0.66s;
-}
-
-.pulse:nth-child(3) {
-    animation-delay: -1.33s;
-}
-
-@keyframes pulse {
-    0% {
-        opacity: 0.7;
-        transform: translate(-50%, -50%) scale(0.5);
+/* Large screens (up to 1200px) */
+@media (max-width: 1200px) {
+    body {
+        margin: 2.5rem 6.25rem; /* Adjusted margin for large screens */
     }
-    100% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(1);
+    
+    /* Keep other styles similar to desktop */
+}
+
+/* Medium screens (up to 768px) */
+@media (max-width: 768px) {
+    body {
+        margin: 2.5rem 3.125rem; /* Further adjusted margin for medium screens */
     }
+    
+    /* Keep other styles similar to desktop */
 }
 
-.header-text {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap; /* Allow wrapping for small screens */
-}
+/* Small screens (up to 480px) */
+@media (max-width: 480px) {
+    body {
+        margin: 1.25rem; /* Adjusted margin for small screens */
+    }
 
-.header-text span {
-    margin-right: 1.25rem; /* 20px */
-    font-size: 1rem; /* 16px */
-}
+    /* Header container adjustments */
+    .header-container {
+        flex-wrap: nowrap; /* Prevent wrapping */
+        justify-content: space-between; /* Space items evenly */
+    }
 
-/* Hero Section */
-.hero-container {
-    margin-bottom: 3.125rem; /* 50px */
-}
+    .header-text {
+        font-size: 0.875rem; /* Reduce font size for better fit */
+    }
 
-.welcome, .nav {
-    line-height: 1.5; /* Line height */
-}
+    /* Project info section adjustments */
+    .project-info {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
 
-/* Project Section */
-.project {
-    margin-bottom: 6.25rem; /* 100px */
-}
+    .project-title {
+        margin-bottom: 0.625rem; /* Add space between title and roles */
+    }
 
-/* Project Info Section */
-.project-info {
-    display: flex;
-    justify-content: space-between; /* Space items evenly */
-    align-items: center; /* Center align items vertically */
-    flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
-    gap: 2em; /* Gap between elements */
-}
+    .role-info {
+        flex-wrap: wrap; /* Allow role containers to wrap */
+        gap: 0.5rem; /* Add gap between role containers */
+    }
 
-.project-title {
-    /* No specific styles needed for positioning */
-}
+    .role-container {
+        font-size: 0.75rem; /* Reduce font size in role containers */
+        padding: 0.25rem 0.5rem; /* Adjust padding for smaller screens */
+    }
 
-.role-info {
-    display: flex; /* Flex layout */
-    gap: 1em; /* Gap between role containers */
-    margin-left: auto; /* Push to right edge */
-    color: rgba(0, 0, 0, 0.3); /* Subdued color */
-}
-
-/* Role Container Styles */
-.role-container {
-    background-color: #f1f4f7; /* Background color */
-    border-radius: 0.3125rem; /* 5px */
-    padding: 0.3125rem 0.625rem; /* 5px 10px */
-    display: inline-block; /* Inline block display */
-}
-
-.role-container span {
-    font-size: 0.875rem; /* 14px */
-    color: #2480ed; /* Role container text color */
-}
-
-/* Description Section */
-.description {
-    width: 50%; /* 50% width */
-    margin: 1.25rem 0; /* 20px */
-    font-size: 0.875rem; /* 14px */
-}
-
-/* Project Images Section */
-.project-images {
-    display: flex; /* Flex layout */
-    flex-direction: column; /* Column direction */
-    gap: 1em; /* Gap between images */
-    margin-top: 1.25rem; /* 20px */
-}
-
-.project-images img {
-    max-width: 100%; /* Maximum width */
-    height: auto; /* Auto height */
-    margin-top: 1.25rem; /* 20px */
-}
+    /* Adjust description and image sizes */
+    .description {
+        width: 100%; /* Full width on small screens */
+    }
 
     .project-images img {
-        max-width: 100%; /* Ensure images are responsive */
-        height: auto; /* Maintain aspect ratio */
+        margin-top: 0.625rem; /* Reduce space between images */
     }
 }
