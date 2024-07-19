@@ -123,7 +123,7 @@ header {
     gap: 2rem;
     margin-left: auto;
     margin-top: 0;
-    margin-bottom: 3.125rem;
+    margin-bottom: 1.25rem;
     color: #A7B4BE;
 }
 
@@ -140,7 +140,7 @@ header {
 /* Project Section */
 .project {
     margin-top: 0;
-    margin-bottom: 6.25rem;
+    margin-bottom: 3.125rem;
 }
 
 .project-info {
