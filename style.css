@@ -259,12 +259,8 @@ header {
 	
 	/* Project Section */
 	.project {
-    	margin-bottom: 2.5rem;
+    	margin-bottom: 2rem;
 	}
-
-    .project-info {
-        margin-bottom: 0.5rem;
-    }
 
     .project-title {
         margin-bottom: 0;
@@ -293,6 +289,6 @@ header {
     }
 
     .project-images img {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.5rem; /* Reduced from 2rem */
     }
 }
