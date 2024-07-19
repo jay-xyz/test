@@ -241,7 +241,7 @@ header {
     
     /* Header Styles */
 	header {
-    	margin-bottom: 1rem;
+    	margin-bottom: 2rem;
 	}
 
     .header-container {
@@ -254,12 +254,12 @@ header {
     
     /* Hero Section */
 	.hero-container {
-    	margin-bottom: 1rem;
+    	margin-bottom: 2rem;
 	}
 	
 	/* Project Section */
 	.project {
-    	margin-bottom: 1rem;
+    	margin-bottom: 2.5rem;
 	}
 
     .project-info {
