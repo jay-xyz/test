@@ -10,24 +10,23 @@ html {
 }
 
 body {
+    font-family: 'Manrope', sans-serif;
     margin: 2.5rem 12.5rem;
     padding: 0;
-    font-family: 'Manrope', sans-serif;
 }
 
-/* Hyperlink Styles */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Heading Styles */
+/* Typography */
 h1, h2, h3 {
     font-size: 2rem;
     font-weight: normal;
     margin: 0;
 }
 
+h2, h3 {
+    font-size: 1rem;
+}
+
+/* Color Accents */
 h1 .designer {
     color: #A7B4BE;
 }
@@ -36,8 +35,10 @@ h1 .arrow {
     color: #2480ed;
 }
 
-h2, h3 {
-    font-size: 1rem;
+/* Link Styles */
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Header Styles */
@@ -53,13 +54,13 @@ header {
     flex-wrap: wrap;
 }
 
+/* Avatar and Pulsating Dot */
 .avi {
     width: 3.5rem;
     height: 3.5rem;
     position: relative;
 }
 
-/* Pulsating Dot Animation */
 .pulsating-dot {
     width: 1.75rem;
     height: 1.75rem;
@@ -71,6 +72,7 @@ header {
     transform: translate(-50%, -50%);
 }
 
+/* Pulse Animation */
 .pulse {
     position: absolute;
     width: 3.5rem;
@@ -103,6 +105,7 @@ header {
     }
 }
 
+/* Header Text */
 .header-text {
     display: flex;
     align-items: center;
@@ -114,19 +117,19 @@ header {
     font-size: 1rem;
 }
 
-
 /* Quick Links Section */
 .quick-links {
-	display: flex;
+    display: flex;
     gap: 2rem;
     margin-left: auto;
+    margin-top: 0;
     margin-bottom: 3.125rem;
     color: #A7B4BE;
 }
 
-
 /* Hero Section */
 .hero-container {
+    margin-top: 0;
     margin-bottom: 3.125rem;
 }
 
@@ -136,20 +139,23 @@ header {
 
 /* Project Section */
 .project {
+    margin-top: 0;
     margin-bottom: 6.25rem;
 }
 
-/* Project Info Section */
 .project-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
     gap: 2em;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
 }
 
 .project-title {
-    /* No specific styles needed for positioning */
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .role-info {
@@ -175,7 +181,8 @@ header {
 /* Description Section */
 .description {
     width: 50%;
-    margin: 1.25rem 0;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
     font-size: 0.875rem;
 }
 
@@ -185,12 +192,14 @@ header {
     flex-direction: column;
     gap: 1em;
     margin-top: 1.25rem;
+    margin-bottom: 0;
 }
 
 .project-images img {
     max-width: 100%;
     height: auto;
     margin-top: 1.25rem;
+    margin-bottom: 0;
 }
 
 /* Media Queries for Responsiveness */
@@ -208,7 +217,6 @@ header {
         margin: 2.5rem 3.125rem;
     }
     
-    /* Project info section adjustments */
     .project-info {
         flex-direction: column;
         align-items: flex-start;
@@ -231,20 +239,15 @@ header {
         margin: 1.25rem;
     }
 
-    /* Header container adjustments */
     .header-container {
         flex-wrap: nowrap;
-        justify-content: space-between;
     }
 
     .header-text {
         font-size: 0.875rem;
     }
 
-    /* Project info section adjustments */
     .project-info {
-        flex-direction: column;
-        align-items: flex-start;
         margin-bottom: 1rem;
     }
 
@@ -265,19 +268,11 @@ header {
         padding: 0.25rem 0.5rem;
     }
 
-    /* Description section */
     .description {
-        width: 100% !important;
-        max-width: none;
-        margin-left: 0;
-        margin-right: 0;
-        box-sizing: border-box;
-        padding-left: 0;
-        padding-right: 0;
+        width: 100%;
         margin-bottom: 2rem;
     }
 
-    /* Project Images Section */
     .project-images {
         margin-top: 0;
     }
