@@ -238,6 +238,11 @@ header {
     body {
         margin: 1.25rem;
     }
+    
+    /* Header Styles */
+	header {
+    	margin-bottom: 1rem;
+	}
 
     .header-container {
         flex-wrap: nowrap;
@@ -246,6 +251,16 @@ header {
     .header-text {
         font-size: 0.875rem;
     }
+    
+    /* Hero Section */
+	.hero-container {
+    	margin-bottom: 1rem;
+	}
+	
+	/* Project Section */
+	.project {
+    	margin-bottom: 1rem;
+	}
 
     .project-info {
         margin-bottom: 1rem;
