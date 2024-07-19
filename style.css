@@ -120,7 +120,7 @@ header {
 /* Quick Links Section */
 .quick-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.25rem;
     margin-left: auto;
     margin-top: 0;
     margin-bottom: 1.25rem;
