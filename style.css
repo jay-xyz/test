@@ -29,7 +29,7 @@ h1, h2, h3 {
 }
 
 h1 .designer {
-    color: rgba(0, 0, 0, 0.3);
+    color: #A7B4BE;
 }
 
 h1 .arrow {
@@ -113,6 +113,17 @@ header {
     margin-right: 1.25rem;
     font-size: 1rem;
 }
+
+
+/* Quick Links Section */
+.quick-links {
+	display: flex;
+    gap: 1em;
+    margin-left: auto;
+    margin-bottom: 3.125rem;
+    color: #A7B4BE;
+}
+
 
 /* Hero Section */
 .hero-container {
