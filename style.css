@@ -263,11 +263,11 @@ header {
 	}
 
     .project-info {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
 
     .project-title {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
 
     .role-info {
@@ -275,7 +275,7 @@ header {
         gap: 0.5rem;
         width: 100%;
         margin-left: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
 
     .role-container {
@@ -285,7 +285,8 @@ header {
 
     .description {
         width: 100%;
-        margin-bottom: 2rem;
+        margin-top: 0.5rem; /* Add this to reduce space above description */
+        margin-bottom: 1.5rem; /* Reduced from 2rem */
     }
 
     .project-images {
