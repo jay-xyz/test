@@ -118,7 +118,7 @@ header {
 /* Quick Links Section */
 .quick-links {
 	display: flex;
-    gap: 1em;
+    gap: 2rem;
     margin-left: auto;
     margin-bottom: 3.125rem;
     color: #A7B4BE;
