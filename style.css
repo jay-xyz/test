@@ -285,8 +285,7 @@ header {
 
     .description {
         width: 100%;
-        margin-top: 0.5rem; /* Add this to reduce space above description */
-        margin-bottom: 1.5rem; /* Reduced from 2rem */
+        margin-bottom: 0.5rem; /* Reduced from 2rem */
     }
 
     .project-images {
@@ -294,6 +293,6 @@ header {
     }
 
     .project-images img {
-        margin-top: 1rem;
+        margin-bottom: 0.5rem;
     }
 }
