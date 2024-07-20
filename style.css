@@ -29,10 +29,11 @@ h2, h3 {
 /* Color Accents */
 h1 .designer {
     color: #A7B4BE;
+    font-weight: 1;
 }
 
 h1 .arrow {
-    color: #2480ed;
+    color: #0071e3;
 }
 
 /* Link Styles */
@@ -64,12 +65,12 @@ header {
 .pulsating-dot {
     width: 1.75rem;
     height: 1.75rem;
-    background-color: #133dd7;
     border-radius: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: colorChange 10s infinite linear;
 }
 
 /* Pulse Animation */
@@ -78,20 +79,19 @@ header {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
-    background-color: #133dd7;
     opacity: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.5);
-    animation: pulse 2s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: pulse 2s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94), colorChange 10s infinite linear;
 }
 
 .pulse:nth-child(2) {
-    animation-delay: -0.66s;
+    animation-delay: -0.66s, 0s;
 }
 
 .pulse:nth-child(3) {
-    animation-delay: -1.33s;
+    animation-delay: -1.33s, 0s;
 }
 
 @keyframes pulse {
@@ -103,6 +103,13 @@ header {
         opacity: 0;
         transform: translate(-50%, -50%) scale(1);
     }
+}
+
+@keyframes colorChange {
+    0%, 100% { background-color: #007FFF; }  /* Vivid Blue */
+    25% { background-color: #00FF00; }       /* Lime Green */
+    50% { background-color: #FF6600; }       /* Bright Orange */
+    75% { background-color: #FF1493; }       /* Deep Pink */
 }
 
 /* Header Text */
@@ -175,7 +182,7 @@ header {
 
 .role-container span {
     font-size: 0.875rem;
-    color: #2480ed;
+    color: #0071e3;
 }
 
 /* Description Section */
