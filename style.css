@@ -290,6 +290,7 @@ header {
 
     .project-title {
         margin-bottom: 0;
+        font-size: 1.625em;
     }
 
     .role-info {
@@ -297,7 +298,6 @@ header {
         gap: 0.5rem;
         width: 100%;
         margin-left: 0;
-        margin-bottom: 0.5rem;
     }
 
     .role-container {
@@ -307,7 +307,8 @@ header {
 
     .description {
         width: 100%;
-        margin-bottom: 1.25rem;
+        font-size: 1.625em;
+        margin-bottom: 3rem;
     }
 
     .project-images {
@@ -315,6 +316,6 @@ header {
     }
 
     .project-images img {
-        margin-bottom: 1.25rem;
+        margin-bottom: 3rem;
     }
 }
