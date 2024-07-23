@@ -266,13 +266,12 @@ header {
     }
 
     .header-text {
-        font-size: 0.875rem;
+        font-size: 0.8rem;
     }
     
     /* Hero Section */
 	.hero-container {
-    	margin-bottom: 1.25rem;
-
+    	margin-bottom: 1.625rem;
 	}
     
     /* Project Section */
@@ -300,7 +299,7 @@ header {
     .description {
         width: 100%;
         font-size: 1.25em;
-        margin-bottom: 3rem;
+        margin-bottom: 1.625rem;
     }
 
     .project-images {
