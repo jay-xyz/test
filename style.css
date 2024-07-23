@@ -285,12 +285,12 @@ header {
     
     /* Project Section */
     .project {
-        margin-bottom: 2rem;
+        margin-bottom: 1.625rem;
     }
 
     .project-title {
         margin-bottom: 0;
-        font-size: 1.625em;
+        font-size: 1.25em;
     }
 
     .role-info {
@@ -307,7 +307,7 @@ header {
 
     .description {
         width: 100%;
-        font-size: 1.625em;
+        font-size: 1.25em;
         margin-bottom: 3rem;
     }
 
@@ -316,6 +316,6 @@ header {
     }
 
     .project-images img {
-        margin-bottom: 3rem;
+        margin-bottom: 1.625rem;
     }
 }
