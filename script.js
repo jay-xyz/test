@@ -11,122 +11,127 @@ document.addEventListener('DOMContentLoaded', function() {
         clockElement.textContent = `${hours}:${minutes}:${seconds}`;
     }
     
-    // Call updateClock every second
     setInterval(updateClock, 1000);
-    
-    // Initial call to display clock immediately
     updateClock();
 });
 
 function updateGreeting() {
-        const now = new Date();
-        const hour = now.getHours();
-        let greeting;
-        if (hour < 12) {
-            greeting = "Good Morning";
-        } else if (hour < 18) {
-            greeting = "Good Afternoon";
-        } else {
-            greeting = "Good Evening";
-        }
-        document.getElementById('greeting').textContent = greeting;
+    const now = new Date();
+    const hour = now.getHours();
+    let greeting;
+    if (hour < 12) {
+        greeting = "Good Morning";
+    } else if (hour < 18) {
+        greeting = "Good Afternoon";
+    } else {
+        greeting = "Good Evening";
+    }
+    document.getElementById('greeting').textContent = greeting;
+}
+
+function getWeatherIcon(weatherCode) {
+    // Detailed weather code to icon mapping
+    const detailedIconMap = {
+        '1000': '☀️', // Clear, Sunny
+        '1100': '⛅', // Mostly Clear
+        '1101': '🌤️', // Partly Cloudy
+        '1102': '☁️', // Mostly Cloudy
+        '1001': '☁️', // Cloudy
+        '2000': '🌫️', // Fog
+        '4000': '🌧️', // Drizzle
+        '4001': '🌧️', // Rain
+        '4200': '🌧️', // Light Rain
+        '4201': '🌧️', // Heavy Rain
+        '5000': '🌨️', // Snow
+        '5001': '🌨️', // Flurries
+        '5100': '🌨️', // Light Snow
+        '5101': '🌨️', // Heavy Snow
+        '6000': '🌧️', // Freezing Drizzle
+        '6001': '🌧️', // Freezing Rain
+        '6200': '🌧️', // Light Freezing Rain
+        '6201': '🌧️', // Heavy Freezing Rain
+        '7000': '🌨️', // Ice Pellets
+        '7101': '🌨️', // Heavy Ice Pellets
+        '7102': '🌨️', // Light Ice Pellets
+        '8000': '⛈️', // Thunderstorm
+    };
+
+    // General categories based on the first digit of the weather code
+    const categoryMap = {
+        '0': '🌡️', // Unknown
+        '1': '☀️', // Clear or cloudy
+        '2': '🌫️', // Fog, mist
+        '3': '💨', // Wind
+        '4': '🌧️', // Rain, drizzle
+        '5': '🌨️', // Snow, ice
+        '6': '🌧️', // Freezing rain or drizzle
+        '7': '🌨️', // Ice pellets, hail
+        '8': '⛈️', // Thunderstorm
+    };
+
+    // First, try to get the detailed icon
+    if (detailedIconMap.hasOwnProperty(weatherCode)) {
+        return detailedIconMap[weatherCode];
     }
 
-    function getWeatherIcon(weatherCode) {
-        // Map weather codes to Unicode weather symbols
-        const iconMap = {
-            '113': '☀️', // Sunny
-            '116': '⛅', // Partly cloudy
-            '119': '☁️', // Cloudy
-            '122': '☁️', // Overcast
-            '143': '🌫️', // Mist
-            '176': '🌦️', // Patchy rain possible
-            '179': '🌨️', // Patchy snow possible
-            '182': '🌧️', // Patchy sleet possible
-            '185': '🌧️', // Patchy freezing drizzle possible
-            '200': '⛈️', // Thundery outbreaks possible
-            '227': '🌨️', // Blowing snow
-            '230': '🌨️', // Blizzard
-            '248': '🌫️', // Fog
-            '260': '🌫️', // Freezing fog
-            '263': '🌦️', // Patchy light drizzle
-            '266': '🌦️', // Light drizzle
-            '281': '🌧️', // Freezing drizzle
-            '284': '🌧️', // Heavy freezing drizzle
-            '293': '🌦️', // Patchy light rain
-            '296': '🌦️', // Light rain
-            '299': '🌧️', // Moderate rain at times
-            '302': '🌧️', // Moderate rain
-            '305': '🌧️', // Heavy rain at times
-            '308': '🌧️', // Heavy rain
-            '311': '🌧️', // Light freezing rain
-            '314': '🌧️', // Moderate or heavy freezing rain
-            '317': '🌨️', // Light sleet
-            '320': '🌨️', // Moderate or heavy sleet
-            '323': '🌨️', // Patchy light snow
-            '326': '🌨️', // Light snow
-            '329': '🌨️', // Patchy moderate snow
-            '332': '🌨️', // Moderate snow
-            '335': '🌨️', // Patchy heavy snow
-            '338': '🌨️', // Heavy snow
-            '350': '🌧️', // Ice pellets
-            '353': '🌦️', // Light rain shower
-            '356': '🌧️', // Moderate or heavy rain shower
-            '359': '🌧️', // Torrential rain shower
-            '362': '🌧️', // Light sleet showers
-            '365': '🌧️', // Moderate or heavy sleet showers
-            '368': '🌨️', // Light snow showers
-            '371': '🌨️', // Moderate or heavy snow showers
-            '374': '🌧️', // Light showers of ice pellets
-            '377': '🌧️', // Moderate or heavy showers of ice pellets
-            '386': '⛈️', // Patchy light rain with thunder
-            '389': '⛈️', // Moderate or heavy rain with thunder
-            '392': '🌩️', // Patchy light snow with thunder
-            '395': '⛈️'  // Moderate or heavy snow with thunder
-        };
-        return iconMap[weatherCode] || '🌡️'; // Default to thermometer if code not found
-    }
+    // If no detailed icon found, fall back to the category
+    const category = weatherCode.toString()[0];
+    return categoryMap[category] || '🌡️'; // Default to thermometer if no match found
+}
 
-    function getWeather() {
-        fetch('https://ipapi.co/json/')
-            .then(response => response.json())
-            .then(locationData => {
-                console.log('Location data:', locationData);
-                const city = locationData.city;
-                const url = `https://wttr.in/${encodeURIComponent(city)}?format=j1`;
+function getWeather() {
+    const apiKey = 'Zg1S3Z7rj790j4KKG7M7bfZAQxfjsU1v';
+    let cityName = "Unknown Location";
+    
+    fetch('https://ipapi.co/json/')
+        .then(response => response.json())
+        .then(locationData => {
+            console.log('Location data:', locationData);
+            const lat = locationData.latitude;
+            const lon = locationData.longitude;
+            cityName = locationData.city || "Unknown Location"; // Store the city name from ipapi.co
+            const url = `https://api.tomorrow.io/v4/weather/forecast?location=${lat},${lon}&apikey=${apiKey}`;
 
-                console.log('Weather API URL:', url);
-                return fetch(url);
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+            console.log('Weather API URL:', url);
+            return fetch(url, { method: 'GET', headers: { accept: 'application/json' } });
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Full Weather API response:', data);
+            
+            if (data.timelines && data.timelines.minutely && data.timelines.minutely[0]) {
+                const currentWeather = data.timelines.minutely[0].values;
+                const temp = Math.round(currentWeather.temperature);
+                const weatherCode = currentWeather.weatherCode.toString();
+                const icon = getWeatherIcon(weatherCode);
+                
+                // Use Tomorrow.io location data as fallback if available
+                if (!cityName && data.location) {
+                    cityName = data.location.name || data.location.city || data.location.address || cityName;
                 }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Weather data:', data);
-                if (data.current_condition && data.current_condition[0].temp_C) {
-                    const temp = data.current_condition[0].temp_C;
-                    const weatherCode = data.current_condition[0].weatherCode;
-                    const icon = getWeatherIcon(weatherCode);
-                    document.getElementById('weather').textContent = `${icon} ${temp}°C`;
-                } else {
-                    throw new Error('Unexpected API response structure');
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching weather data:', error);
-                document.getElementById('weather').textContent = `Weather data unavailable: ${error.message}`;
-            });
-    }
+                
+                console.log('Location being used:', cityName);
+                
+                document.getElementById('weather').textContent = `${cityName} ${icon} ${temp}°C`;
+            } else {
+                throw new Error('Unexpected API response structure');
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching weather data:', error);
+            document.getElementById('weather').textContent = `Weather data unavailable: ${error.message}`;
+        });
+}
 
-    // Only run these functions if the necessary elements exist
-    if (document.getElementById('greeting') && document.getElementById('weather')) {
-        updateGreeting();
-        getWeather();
-        setInterval(updateGreeting, 60000);
-        setInterval(getWeather, 600000);
-    }
-
-
+// Only run these functions if the necessary elements exist
+if (document.getElementById('greeting') && document.getElementById('weather')) {
+    updateGreeting();
+    getWeather();
+    setInterval(updateGreeting, 60000);
+    setInterval(getWeather, 600000);
+}
