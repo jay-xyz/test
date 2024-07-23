@@ -256,14 +256,6 @@ header {
         margin-right: 1.25rem;
     }
     
-    /* Typography */
-	h1, h2, h3 {
-    font-size: 2rem;
-    font-weight: normal;
-    margin: 0;
-	
-	}
-    
     /* Header Styles */
     header {
         margin-bottom: 2rem;
