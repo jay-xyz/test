@@ -120,36 +120,46 @@ header {
     75% { opacity: 0.1; }       /* 10% opaque */
 }
 
-/* Header Text */
-.header-text {
-    display: flex;
-    flex-direction: column;
-}
+    /* Header Styles */
+    header {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
 
-.header-text #greeting {
-    margin-bottom: 0.5rem;
-}
+    .header-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+    }
 
-.header-text .bottom-line {
-    display: flex;
-    align-items: center;
-}
+    .header-text {
+        font-size: 0.75rem;
+        font-weight: 300;
+        align-items: flex-end;
+        text-align: right;
+        max-width: 60%;
+    }
 
-.header-text .bottom-line #weather {
-    display: flex;
-    align-items: center;
-}
+    .header-text #greeting {
+        margin-bottom: 0.25rem;
+    }
 
-#weather-icon {
-    font-size: 1.5em;
-    margin-right: 0.5em;
-    margin-left: 0.5rem;
-}
+    .header-text .bottom-line {
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
 
-.header-text span {
-    font-size: 1rem;
-    font-weight: 300;
-}
+    .header-text #weather {
+        margin-left: 0.5rem;
+    }
+
+    #weather-icon {
+        font-size: 1.2em;
+        margin-right: 0.3em;
+        margin-left: 0.3rem;
+    }
 
 /* Hero Section */
 .hero-container {
@@ -289,29 +299,14 @@ header {
 
     .header-container {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .header-text {
-        font-size: 0.875rem;
+        font-size: 0.2rem;
         font-weight: 300;
-        width: 100%;
-        align-items: flex-start;
-        margin-top: 1rem;
-    }
-
-    .header-text .bottom-line {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        width: 100%;
-    }
-
-    .header-text #greeting,
-    .header-text #weather {
-        margin-bottom: 0.5rem;
     }
     
     /* Hero Section */
