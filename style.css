@@ -124,7 +124,6 @@ header {
 .header-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
 }
 
 .header-text #greeting {
@@ -137,14 +136,13 @@ header {
 }
 
 .header-text .bottom-line #weather {
-    /* margin-right: 1rem; Adjust this value to increase or decrease the gap */
     display: flex;
     align-items: center;
 }
 
 #weather-icon {
-    font-size: 1.5em; /* Adjust this value to change the icon size */
-    margin-right: 0.5em; /* Add a small gap between the icon and the text */
+    font-size: 1.5em;
+    margin-right: 0.5em;
     margin-left: 0.5rem;
 }
 
@@ -291,14 +289,29 @@ header {
 
     .header-container {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
     }
 
     .header-text {
-        font-size: 0.2rem;
+        font-size: 0.875rem;
         font-weight: 300;
+        width: 100%;
+        align-items: flex-start;
+        margin-top: 1rem;
+    }
+
+    .header-text .bottom-line {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .header-text #greeting,
+    .header-text #weather {
+        margin-bottom: 0.5rem;
     }
     
     /* Hero Section */
