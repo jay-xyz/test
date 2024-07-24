@@ -257,7 +257,7 @@ header {
     
     /* Typography */
 	h1 {
-    	font-size: 3rem;
+    	font-size: 3.5rem;
     	font-weight:300;
     	line-height: 1;
     	letter-spacing: -.055em;
@@ -273,7 +273,7 @@ header {
     }
 
     .header-text {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
         font-weight: 300;
     }
     
