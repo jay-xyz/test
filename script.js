@@ -117,7 +117,7 @@ function getWeather() {
                 
                 console.log('Location being used:', cityName);
                 
-                document.getElementById('weather').textContent = `${cityName} ${icon} ${temp}°C`;
+                document.getElementById('weather').textContent = `${cityName}\u00A0\u00A0${icon} ${temp}°C`;
             } else {
                 throw new Error('Unexpected API response structure');
             }
