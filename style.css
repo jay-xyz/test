@@ -5,7 +5,6 @@
     padding: 0;
 }
 
-
 body {
     font-family: 'Manrope', sans-serif;
     padding: 0;
@@ -14,7 +13,7 @@ body {
 /* Typography */
 h1 {
     font-size: 5rem;
-    font-weight:300;
+    font-weight: 300;
     line-height: 1;
     letter-spacing: -.055em;
 }
@@ -53,7 +52,7 @@ header {
 
 .header-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -119,23 +118,39 @@ header {
     25% { opacity: 0.7; }       /* 70% opaque */
     50% { opacity: 0.4; }       /* 40% opaque */
     75% { opacity: 0.1; }       /* 10% opaque */
-    75% { opacity: 0.1; }       /* 10% opaque */
-    
 }
 
 /* Header Text */
 .header-text {
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header-text #greeting {
+    margin-bottom: 0.5rem;
+}
+
+.header-text .bottom-line {
+    display: flex;
     align-items: center;
-    flex-wrap: wrap;
+}
+
+.header-text .bottom-line #weather {
+    margin-right: 1rem; /* Adjust this value to increase or decrease the gap */
+    display: flex;
+    align-items: center;
+}
+
+#weather-icon {
+    font-size: 1.5em; /* Adjust this value to change the icon size */
+    margin-right: 0.25em; /* Add a small gap between the icon and the text */
 }
 
 .header-text span {
-    margin-right: 1.25rem;
     font-size: 1rem;
     font-weight: 300;
 }
-
 
 /* Hero Section */
 .hero-container {
@@ -164,7 +179,6 @@ header {
     gap: 2em;
     margin-bottom: 1.5rem;
 }
-
 
 .role-info {
     display: flex;
@@ -249,10 +263,10 @@ header {
 /* Small screens (up to 480px) */
 @media (max-width: 480px) {
     body {
-    	padding-left: 1rem;
-	padding-right: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
-	
+    
     header,
     .hero-container,
     .project {
@@ -261,36 +275,35 @@ header {
     }
     
     /* Typography */
-	h1 {
-    	font-size: 3.5rem;
-    	font-weight:300;
-    	line-height: 1;
-    	letter-spacing: -.055em;
-	}
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: -.055em;
+    }
     
     /* Header Styles */
     header {
         margin-bottom: 2rem;
         width: 100%;
-	gap: 0.5rem;
     }
 
     .header-container {
-    	display: flex;
-    	align-items: center;
-    	justify-content: space-between;
-    	flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .header-text {
-        font-size: 0.1rem;
+        font-size: 0.2rem;
         font-weight: 300;
     }
     
     /* Hero Section */
-	.hero-container {
-    	margin-bottom: 1.625rem;
-	}
+    .hero-container {
+        margin-bottom: 1.625rem;
+    }
     
     /* Project Section */
     .project {
