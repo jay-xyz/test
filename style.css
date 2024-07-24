@@ -120,46 +120,38 @@ header {
     75% { opacity: 0.1; }       /* 10% opaque */
 }
 
-    /* Header Styles */
-    header {
-        margin-bottom: 2rem;
-        width: 100%;
-    }
+/* Header Text */
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 
-    .header-container {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 100%;
-    }
+.header-text #greeting {
+    margin-bottom: 0.5rem;
+}
 
-    .header-text {
-        font-size: 0.75rem;
-        font-weight: 300;
-        align-items: flex-end;
-        text-align: right;
-        max-width: 60%;
-    }
+.header-text .bottom-line {
+    display: flex;
+    align-items: center;
+}
 
-    .header-text #greeting {
-        margin-bottom: 0.25rem;
-    }
+.header-text .bottom-line #weather {
+    /* margin-right: 1rem; Adjust this value to increase or decrease the gap */
+    display: flex;
+    align-items: center;
+}
 
-    .header-text .bottom-line {
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-    }
+#weather-icon {
+    font-size: 1.5em; /* Adjust this value to change the icon size */
+    margin-right: 0.5em; /* Add a small gap between the icon and the text */
+    margin-left: 0.5rem;
+}
 
-    .header-text #weather {
-        margin-left: 0.5rem;
-    }
-
-    #weather-icon {
-        font-size: 1.2em;
-        margin-right: 0.3em;
-        margin-left: 0.3rem;
-    }
+.header-text span {
+    font-size: 1rem;
+    font-weight: 300;
+}
 
 /* Hero Section */
 .hero-container {
@@ -273,7 +265,7 @@ header {
 @media (max-width: 480px) {
     body {
         padding-left: 1rem;
-        padding-right: 1rem;
+        padding-right: 0.425rem;
     }
     
     header,
@@ -303,11 +295,32 @@ header {
         justify-content: space-between;
         flex-wrap: wrap;
     }
+	
+	.header-text #greeting {
+    margin-bottom: 0.5rem;
+	}
 
-    .header-text {
-        font-size: 0.2rem;
-        font-weight: 300;
-    }
+	.header-text .bottom-line {
+    display: flex;
+    align-items: center;
+	}
+
+	.header-text .bottom-line #weather {
+    /* margin-right: 1rem; Adjust this value to increase or decrease the gap */
+    display: flex;
+    align-items: center;
+	}
+
+	#weather-icon {
+    font-size: 0.2em; /* Adjust this value to change the icon size */
+    margin-right: 0.5em; /* Add a small gap between the icon and the text */
+    margin-left: 0.5rem;
+	}
+
+	.header-text span {
+    font-size: 0.2rem;
+    font-weight: 300;
+	}
     
     /* Hero Section */
     .hero-container {
