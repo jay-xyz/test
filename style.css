@@ -48,7 +48,7 @@ a {
 /* Header Styles */
 header {
     background-color: white;
-    margin: 2.5rem 12.5rem 2.5rem 12.5rem;
+    margin: 2.5rem 12.5rem 2.5rem 12.5rem; /* Top, Right, Bottom, Left */
 }
 
 .header-container {
@@ -249,12 +249,19 @@ header {
 /* Small screens (up to 480px) */
 @media (max-width: 480px) {
     header,
-    .quick-links,
     .hero-container,
     .project {
         margin-left: 1.25rem;
         margin-right: 1.25rem;
     }
+    
+    /* Typography */
+	h1 {
+    	font-size: 3rem;
+    	font-weight:300;
+    	line-height: 1;
+    	letter-spacing: -.055em;
+	}
     
     /* Header Styles */
     header {
@@ -266,7 +273,8 @@ header {
     }
 
     .header-text {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
+        font-weight: 300;
     }
     
     /* Hero Section */
