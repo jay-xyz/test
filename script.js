@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function getWeatherIcon(weatherCode) {
-        // Detailed weather code to icon mapping
         const detailedIconMap = {
             '1000': '☀️', // Clear, Sunny
             '1100': '⛅', // Mostly Clear
@@ -51,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
             '8000': '⛈️', // Thunderstorm
         };
 
-        // General categories based on the first digit of the weather code
         const categoryMap = {
             '0': '🌡️', // Unknown
             '1': '☀️', // Clear or cloudy
@@ -64,12 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
             '8': '⛈️', // Thunderstorm
         };
 
-        // First, try to get the detailed icon
         if (detailedIconMap.hasOwnProperty(weatherCode)) {
             return detailedIconMap[weatherCode];
         }
 
-        // If no detailed icon found, fall back to the category
         const category = weatherCode.toString()[0];
         return categoryMap[category] || '🌡️'; // Default to thermometer if no match found
     }
@@ -106,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     const weatherCode = currentWeather.weatherCode.toString();
                     const icon = getWeatherIcon(weatherCode);
                     
-                    // Use Tomorrow.io location data as fallback if available
                     if (!cityName && data.location) {
                         cityName = data.location.name || data.location.city || data.location.address || cityName;
                     }
@@ -125,7 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    // Only run these functions if the necessary elements exist
     if (document.getElementById('greeting') && document.getElementById('weather')) {
         updateGreeting();
         getWeather();
