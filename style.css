@@ -312,13 +312,13 @@ header {
 	}
 
 	#weather-icon {
-    font-size: 0.2em; /* Adjust this value to change the icon size */
+    font-size: 1.25em; /* Adjust this value to change the icon size */
     margin-right: 0.5em; /* Add a small gap between the icon and the text */
     margin-left: 0.5rem;
 	}
 
 	.header-text span {
-    font-size: 0.2rem;
+    font-size: 1.25em;
     font-weight: 300;
 	}
     
