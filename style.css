@@ -264,8 +264,8 @@ header {
 /* Small screens (up to 480px) */
 @media (max-width: 480px) {
     body {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
     
     header,
