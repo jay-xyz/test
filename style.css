@@ -248,6 +248,11 @@ header {
 
 /* Small screens (up to 480px) */
 @media (max-width: 480px) {
+    body {
+    	padding-left: 1rem;
+	padding-right: 1rem;
+    }
+	
     header,
     .hero-container,
     .project {
