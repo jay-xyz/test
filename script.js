@@ -117,14 +117,15 @@ function getWeather() {
                 
                 console.log('Location being used:', cityName);
                 
-                document.getElementById('weather').textContent = `${cityName}\u00A0\u00A0${icon} ${temp}°C`;
+                document.getElementById('weather-icon').textContent = icon;
+                document.getElementById('weather-text').textContent = `${cityName} ${temp}°C`;
             } else {
                 throw new Error('Unexpected API response structure');
             }
         })
         .catch(error => {
             console.error('Error fetching weather data:', error);
-            document.getElementById('weather').textContent = `Weather data unavailable: ${error.message}`;
+            document.getElementById('weather-text').textContent = `Weather data unavailable: ${error.message}`;
         });
 }
 
