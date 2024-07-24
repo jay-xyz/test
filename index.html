@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jay Patel</title>
+    <title>Jay Patel - Designer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -21,111 +18,93 @@
             </div>
             <div class="header-text">
                 <span id="greeting"></span>
-                <span><span id="weather"></span>
-                <span id="clock"></span>
+                <div class="bottom-line">
+                    <span id="weather"><span id="weather-text"></span><span id="weather-icon"></span></span>
+                    <span id="clock"></span>
+                </div>
             </div>
         </div>
     </header>
 
-    <div class="hero-container">
-        <section class="welcome">
-            <h1>Jay Patel</h1>
-            <h1><span class="designer">Graphic Design + Product Design</span></h1>
-        </section>
-        <section class="nav">
-            <h1>Select Projects</h1>
-            <h1>Playground <span class="arrow"><i class="bi bi-arrow-up-right"></i></span></h1>
-            <h1><span class="contact">Contact</span></h1>
-        </section>
-    </div>
+    <main>
+        <div class="hero-container">
+            <section class="welcome">
+                <h1>Jay Patel</h1>
+                <h1><span class="designer">Graphic Design + Product Design</span></h1>
+            </section>
+            <section class="nav">
+                <h1>Select Projects</h1>
+                <h1>Playground <span class="arrow">→</span></h1>
+                <h1><span class="contact">Contact</span></h1>
+            </section>
+        </div>
 
-    <section class="project">
-        <section class="project-info">
-            <div class="project-title">
-                <h2>Cine Asia</h2>
+        <section class="project">
+            <div class="project-info">
+                <h2 class="project-title">Cine Asia</h2>
+                <div class="role-info">
+                    <div class="role-container"><span>Art Direction</span></div>
+                    <div class="role-container"><span>Brand Identity</span></div>
+                    <div class="role-container"><span>Product Design</span></div>
+                </div>
             </div>
-            <div class="role-info">
-                <div class="role-container">
-                    <span>Art Direction</span>
-                </div>
-                <div class="role-container">
-                    <span>Brand Identity</span>
-                </div>
-                <div class="role-container">
-                    <span>Product Design</span>
-                </div>
+            <p class="description">
+                Cine Asia is a conceptual app designed to stream Asian films and provide
+                the latest film news from the continent. The intention behind its design
+                was to offer a clean, familiar interface that ensures an easy and
+                enjoyable user experience.
+            </p>
+            <div class="project-images">
+                <img src="images/cineasia-1.png" alt="CineAsia App Mockups">
+                <img src="images/cineasia-2.png" alt="CineAsia App Mockups">
             </div>
         </section>
-        <div class="description">
-            <p>Cine Asia is a conceptual app designed to stream Asian films and provide the latest
-            film news from the continent. The intention behind its design was to offer a clean, familiar
-            interface that ensures an easy and enjoyable user experience.</p>
-        </div>
-        <div class="project-images">
-            <img src="images/cineasia-1.png" alt="CineAsia App Mockups">
-            <img src="images/cineasia-2.png" alt="CineAsia App Mockups">
-        </div>  
-    </section>
 
-    <section class="project">
-        <section class="project-info">
-            <div class="project-title">
-                <h2>Little Hands</h2>
-            </div>
-            <div class="role-info">
-                <div class="role-container">
-                    <span>Art Direction</span>
-                </div>
-                <div class="role-container">
-                    <span>Brand Identity</span>
-                </div>
-                <div class="role-container">
-                    <span>Product Design</span>
+        <section class="project">
+            <div class="project-info">
+                <h2 class="project-title">Little Hands</h2>
+                <div class="role-info">
+                    <div class="role-container"><span>Art Direction</span></div>
+                    <div class="role-container"><span>Brand Identity</span></div>
+                    <div class="role-container"><span>Product Design</span></div>
                 </div>
             </div>
-        </section>
-        <div class="description">
-            <p>Little Hands is a job-seeking platform with emphasis on helping freelancers.
-            As a key member of the project, I crafted the visual identity and curated the
-            app's design aesthetic, ensuring a seamless and engaging user experience for
-            job seekers and clients.</p>
-        </div>
-        <div class="project-images">
-             <img src="images/littlehands-1.png" alt="Little Hands App">
-             <img src="images/littlehands-2.png" alt="Little Hands App">
-        </div>  
-    </section>
-    
-    <section class="project">
-        <section class="project-info">
-            <div class="project-title">
-                <h2>Regen</h2>
-            </div>
-            <div class="role-info">
-                <div class="role-container">
-                    <span>Art Direction</span>
-                </div>
-                <div class="role-container">
-                    <span>Brand Identity</span>
-                </div>
-                <div class="role-container">
-                    <span>Product Design</span>
-                </div>
+            <p class="description">
+                Little Hands is a job-seeking platform with emphasis on helping
+                freelancers. As a key member of the project, I crafted the visual
+                identity and curated the app's design aesthetic, ensuring a seamless
+                and engaging user experience for job seekers and clients.
+            </p>
+            <div class="project-images">
+                <img src="images/littlehands-1.png" alt="Little Hands App">
+                <img src="images/littlehands-2.png" alt="Little Hands App">
             </div>
         </section>
-        <div class="description">
-            <p>Regen is a US based health startup with an aim of providing premium vitamins and
-            powder based dietary supplements. I led the design in creating their brand identity,
-            website design and product design, ensuring a sleek and future-proof aesthetic.</p>
-        </div>
-        <div class="project-images">
-             <img src="images/regen-1.png" alt="Regen Mobile Website">
-             <img src="images/regen-2.png" alt="Regen Desktop Website">
-             <img src="images/regen-3.png" alt="Regen Desktop Website">
-             <img src="images/regen-4.png" alt="Regen Powder And Vitamins">
-        </div>  
-    </section>
-    
+
+        <section class="project">
+            <div class="project-info">
+                <h2 class="project-title">Regen</h2>
+                <div class="role-info">
+                    <div class="role-container"><span>Art Direction</span></div>
+                    <div class="role-container"><span>Brand Identity</span></div>
+                    <div class="role-container"><span>Product Design</span></div>
+                </div>
+            </div>
+            <p class="description">
+                Regen is a US based health startup with an aim of providing premium
+                vitamins and powder based dietary supplements. I led the design in
+                creating their brand identity, website design and product design,
+                ensuring a sleek and future-proof aesthetic.
+            </p>
+            <div class="project-images">
+                <img src="images/regen-1.png" alt="Regen Mobile Website">
+                <img src="images/regen-2.png" alt="Regen Desktop Website">
+                <img src="images/regen-3.png" alt="Regen Desktop Website">
+                <img src="images/regen-4.png" alt="Regen Powder And Vitamins">
+            </div>
+        </section>
+    </main>
+
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/95c4c8b031.js" crossorigin="anonymous"></script>
 </body>
