@@ -137,14 +137,15 @@ header {
 }
 
 .header-text .bottom-line #weather {
-    margin-right: 1rem; /* Adjust this value to increase or decrease the gap */
+    /* margin-right: 1rem; Adjust this value to increase or decrease the gap */
     display: flex;
     align-items: center;
 }
 
 #weather-icon {
     font-size: 1.5em; /* Adjust this value to change the icon size */
-    margin-right: 0.25em; /* Add a small gap between the icon and the text */
+    margin-right: 0.5em; /* Add a small gap between the icon and the text */
+    margin-left: 0.5rem;
 }
 
 .header-text span {
@@ -263,8 +264,8 @@ header {
 /* Small screens (up to 480px) */
 @media (max-width: 480px) {
     body {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     
     header,
