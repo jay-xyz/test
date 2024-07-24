@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const lon = locationData.longitude;
                 cityName = locationData.city || "Unknown Location"; // Store the city name from ipapi.co
                 timeZone = locationData.timezone; // Store the timezone
+                updateGreeting(); // Update the greeting immediately after fetching the timezone
                 const url = `https://api.tomorrow.io/v4/weather/forecast?location=${lat},${lon}&apikey=${apiKey}`;
 
                 console.log('Weather API URL:', url);
@@ -121,9 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (document.getElementById('greeting') && document.getElementById('weather')) {
-        updateGreeting();
         getWeather();
-        setInterval(updateGreeting, 60000);
+        setInterval(updateGreeting, 60000); // Update the greeting every minute
         setInterval(getWeather, 600000);
     }
 
