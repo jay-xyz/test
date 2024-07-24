@@ -270,7 +270,10 @@ header {
     }
 
     .header-container {
-        flex-wrap: nowrap;
+    	display: flex;
+    	align-items: center;
+    	justify-content: space-between;
+    	flex-wrap: wrap;
     }
 
     .header-text {
