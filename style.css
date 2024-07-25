@@ -136,6 +136,7 @@ header {
 .bottom-line {
     display: flex;
     align-items: center;
+    white-space: nowrap; /* Ensure content stays on one line */
 }
 
 #clock {
@@ -260,13 +261,13 @@ header {
     }
 
     .bottom-line {
-        flex-direction: column;
-        align-items: flex-end;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
     }
 
     #clock {
-        margin-right: 0;
-        margin-bottom: 0.5rem;
+        margin-right: 1rem;
     }
 }
 
@@ -317,12 +318,11 @@ header {
     .bottom-line {
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
+        white-space: nowrap; /* Ensure content stays on one line */
     }
 
     #clock {
         margin-right: 1rem;
-        margin-bottom: 0;
     }
 
     #weather {
