@@ -137,6 +137,7 @@ header {
     display: flex;
     align-items: center;
     white-space: nowrap; /* Ensure content stays on one line */
+    font-weight: 300;
 }
 
 #clock {
