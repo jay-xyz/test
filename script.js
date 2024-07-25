@@ -13,8 +13,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateDayGreeting() {
         const now = timeZone ? new Date(new Date().toLocaleString('en-US', { timeZone })) : new Date();
-        const options = { weekday: 'long', day: 'numeric', month: 'long' };
-        const formattedDate = now.toLocaleDateString('en-US', options);
+        const options = { 
+            weekday: 'long', 
+            day: 'numeric', 
+            month: 'long',
+            year: 'numeric',
+            formatMatcher: 'basic'
+        };
+        
+        const formatter = new Intl.DateTimeFormat('en-US', options);
+        const parts = formatter.formatToParts(now);
+        
+        const formattedDate = parts
+            .map(part => {
+                switch(part.type) {
+                    case 'weekday': return part.value + ' ';
+                    case 'month': return part.value + ' ';
+                    case 'day': return part.value;
+                    default: return '';
+                }
+            })
+            .join('');
 
         const hour = now.getHours();
         let greeting;
