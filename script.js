@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const clockElement = document.getElementById('clock');
+    const dayGreetingElement = document.getElementById('day-greeting');
     let timeZone = null;
 
     function updateClock() {
@@ -10,8 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
         clockElement.textContent = `${hours}:${minutes}:${seconds}`;
     }
 
-    function updateGreeting() {
+    function updateDayGreeting() {
         const now = timeZone ? new Date(new Date().toLocaleString('en-US', { timeZone })) : new Date();
+        const options = { weekday: 'long', day: 'numeric', month: 'long' };
+        const formattedDate = now.toLocaleDateString('en-US', options);
+
         const hour = now.getHours();
         let greeting;
         if (hour < 12) {
@@ -21,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             greeting = "Good Evening";
         }
-        document.getElementById('greeting').textContent = greeting;
+
+        dayGreetingElement.textContent = `${formattedDate}, ${greeting}`;
     }
 
     function getWeatherIcon(weatherCode) {
@@ -73,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function getWeather() {
         const apiKey = 'Zg1S3Z7rj790j4KKG7M7bfZAQxfjsU1v';
         let cityName = "Unknown Location";
-        
+
         fetch('https://ipapi.co/json/')
             .then(response => response.json())
             .then(locationData => {
@@ -82,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const lon = locationData.longitude;
                 cityName = locationData.city || "Unknown Location"; // Store the city name from ipapi.co
                 timeZone = locationData.timezone; // Store the timezone
-                updateGreeting(); // Update the greeting immediately after fetching the timezone
+                updateDayGreeting(); // Update the day and greeting immediately after fetching the timezone
                 const url = `https://api.tomorrow.io/v4/weather/forecast?location=${lat},${lon}&apikey=${apiKey}`;
 
                 console.log('Weather API URL:', url);
@@ -96,19 +101,19 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(data => {
                 console.log('Full Weather API response:', data);
-                
+
                 if (data.timelines && data.timelines.minutely && data.timelines.minutely[0]) {
                     const currentWeather = data.timelines.minutely[0].values;
                     const temp = Math.round(currentWeather.temperature);
                     const weatherCode = currentWeather.weatherCode.toString();
                     const icon = getWeatherIcon(weatherCode);
-                    
+
                     if (!cityName && data.location) {
                         cityName = data.location.name || data.location.city || data.location.address || cityName;
                     }
-                    
+
                     console.log('Location being used:', cityName);
-                    
+
                     document.getElementById('weather-icon').textContent = icon;
                     document.getElementById('weather-text').textContent = `${cityName} ${temp}°C`;
                 } else {
@@ -121,9 +126,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    if (document.getElementById('greeting') && document.getElementById('weather')) {
+    if (document.getElementById('day-greeting') && document.getElementById('weather')) {
         getWeather();
-        setInterval(updateGreeting, 60000); // Update the greeting every minute
+        updateDayGreeting(); // Initial update of day and greeting
+        setInterval(updateDayGreeting, 60000); // Update the day and greeting every minute
         setInterval(getWeather, 600000);
     }
 
