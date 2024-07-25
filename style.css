@@ -47,14 +47,14 @@ a {
 /* Header Styles */
 header {
     background-color: white;
-    margin: 2.5rem 12.5rem; /* Top, Right, Bottom, Left */
+    padding: 1rem; /* Adjust padding */
 }
 
 .header-container {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Avatar and Pulsating Dot */
@@ -124,7 +124,8 @@ header {
 .header-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center; /* Center-align for mobile */
+    text-align: center; /* Center-align text */
 }
 
 #day-greeting {
@@ -136,11 +137,12 @@ header {
 .bottom-line {
     display: flex;
     align-items: center;
+    justify-content: center; /* Center content */
     white-space: nowrap; /* Ensure content stays on one line */
 }
 
 #clock {
-    margin-right: 1rem; /* Add space between clock and weather */
+    margin-right: 0.5rem; /* Adjust spacing */
 }
 
 #weather {
@@ -227,7 +229,6 @@ header {
 /* Large screens (up to 1200px) */
 @media (max-width: 1200px) {
     header,
-    .quick-links,
     .hero-container,
     .project {
         margin-left: 6.25rem;
@@ -238,7 +239,6 @@ header {
 /* Medium screens (up to 768px) */
 @media (max-width: 768px) {
     header,
-    .quick-links,
     .hero-container,
     .project {
         margin-left: 3.125rem;
@@ -261,68 +261,44 @@ header {
     }
 
     .bottom-line {
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: flex-end;
     }
 
     #clock {
-        margin-right: 1rem;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
     }
 }
 
 /* Small screens (up to 480px) */
 @media (max-width: 480px) {
     body {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     
-    header,
-    .hero-container,
-    .project {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    
-    /* Typography */
-    h1 {
-        font-size: 3.25rem;
-        font-weight: 300;
-        line-height: 1;
-        letter-spacing: -.055em;
-    }
-    
-    /* Header Styles */
     header {
-        margin-bottom: 2rem;
-        width: 100%;
+        padding: 1rem;
     }
 
     .header-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    
-    .header-text {
-        align-items: flex-end;
+        padding: 0;
     }
 
-    #day-greeting {
-        margin-bottom: 0.5rem;
-        font-size: 0.875rem;
+    .header-text {
+        align-items: center; /* Center-align on mobile */
+        text-align: center; /* Center-align text */
     }
 
     .bottom-line {
-        display: flex;
+        flex-direction: row; /* Ensure inline layout */
+        justify-content: center; /* Center content */
         align-items: center;
-        white-space: nowrap; /* Ensure content stays on one line */
     }
 
     #clock {
-        margin-right: 1rem;
+        margin-right: 0.5rem;
     }
 
     #weather {
@@ -331,43 +307,7 @@ header {
     }
 
     #weather-icon {
-        font-size: 1.5rem;
-        margin-left: 0.5em;
-    }
-
-    /* Project Section */
-    .project {
-        margin-bottom: 1.625rem;
-    }
-
-    .project-title {
-        margin-bottom: 0;
-        font-size: 1.25em;
-    }
-
-    .role-info {
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .role-container {
-        font-size: 0.75rem;
-        padding: 0.25rem 0.5rem;
-    }
-
-    .description {
-        width: 100%;
-        font-size: 1.25em;
-        margin-bottom: 1.625rem;
-    }
-
-    .project-images {
-        margin-top: 0;
-    }
-
-    .project-images img {
-        margin-bottom: 1.625rem;
+        font-size: 1.25rem; /* Adjust font size */
+        margin-left: 0.25em;
     }
 }
