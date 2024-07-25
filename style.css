@@ -47,7 +47,7 @@ a {
 /* Header Styles */
 header {
     background-color: white;
-    margin: 2.5rem 12.5rem 2.5rem 12.5rem; /* Top, Right, Bottom, Left */
+    margin: 2.5rem 12.5rem; /* Top, Right, Bottom, Left */
 }
 
 .header-container {
@@ -305,13 +305,33 @@ header {
         flex-wrap: wrap;
     }
     
+    .header-text {
+        align-items: flex-end;
+    }
+
     #day-greeting {
         margin-bottom: 0.5rem;
         font-size: 0.875rem;
     }
 
+    .bottom-line {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #clock {
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+
+    #weather {
+        display: flex;
+        align-items: center;
+    }
+
     #weather-icon {
-        font-size:  0.875rem;
+        font-size: 1.5rem;
         margin-left: 0.5em;
     }
 
