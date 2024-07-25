@@ -127,30 +127,29 @@ header {
     align-items: flex-end;
 }
 
-.header-text #greeting {
+#day-greeting {
+    font-size: 1rem;
+    font-weight: 300;
     margin-bottom: 0.5rem;
 }
 
-.header-text .bottom-line {
+.bottom-line {
     display: flex;
     align-items: center;
 }
 
-.header-text .bottom-line #weather {
-    /* margin-right: 1rem; Adjust this value to increase or decrease the gap */
+#clock {
+    margin-right: 1rem; /* Add space between clock and weather */
+}
+
+#weather {
     display: flex;
     align-items: center;
 }
 
 #weather-icon {
-    font-size: 1.5em; /* Adjust this value to change the icon size */
-    margin-right: 0.5em; /* Add a small gap between the icon and the text */
-    margin-left: 0.5rem;
-}
-
-.header-text span {
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: 1.5em;
+    margin-left: 0.5em;
 }
 
 /* Hero Section */
@@ -259,6 +258,16 @@ header {
         margin-left: 0;
         width: 100%;
     }
+
+    .bottom-line {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    #clock {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
 }
 
 /* Small screens (up to 480px) */
@@ -295,38 +304,17 @@ header {
         justify-content: space-between;
         flex-wrap: wrap;
     }
-	
-    .header-text #greeting {
-    margin-bottom: 0.5rem;
-	}
-
-	.header-text .bottom-line {
-    display: flex;
-    align-items: center;
-	}
-
-	.header-text .bottom-line #weather {
-    /* margin-right: 1rem; Adjust this value to increase or decrease the gap */
-    display: flex;
-    align-items: center;
-	}
-
-	#weather-icon {
-    font-size: 1em; /* Adjust this value to change the icon size */
-    margin-right: 0.5em; /* Add a small gap between the icon and the text */
-    margin-left: 0.5rem;
-	}
-
-	.header-text span {
-    font-size: 1em;
-    font-weight: 300;
-	}
     
-    /* Hero Section */
-    .hero-container {
-        margin-bottom: 1.625rem;
+    #day-greeting {
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
     }
-    
+
+    #weather-icon {
+        font-size:  0.875rem;
+        margin-left: 0.5em;
+    }
+
     /* Project Section */
     .project {
         margin-bottom: 1.625rem;
