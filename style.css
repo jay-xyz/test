@@ -330,6 +330,7 @@ header {
     margin-right: 1rem; /* Add space between clock and weather */
     font-size: 1rem;
     font-weight: 300;
+    margin-right: 2rem;
 }
 
 #weather {
