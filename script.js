@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             greeting = "Good Evening";
         }
 
-        dayGreetingElement.textContent = `${formattedDate} 👋 ${greeting}`;
+        dayGreetingElement.textContent = `${formattedDate}  👋  ${greeting}`;
     }
 
     function getWeatherIcon(weatherCode) {
