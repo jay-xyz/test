@@ -137,16 +137,17 @@ header {
     display: flex;
     align-items: center;
     white-space: nowrap; /* Ensure content stays on one line */
-    font-weight: 300;
 }
 
 #clock {
     margin-right: 1rem; /* Add space between clock and weather */
+    font-weight: 300;
 }
 
 #weather {
     display: flex;
     align-items: center;
+    font-weight: 300;
 }
 
 #weather-icon {
@@ -308,35 +309,44 @@ header {
     }
     
     .header-text {
-        align-items: flex-end;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 
-    #day-greeting {
-        margin-bottom: 0.5rem;
-        font-size: 0.875rem;
-    }
+#day-greeting {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
 
-    .bottom-line {
-        display: flex;
-        align-items: center;
-        white-space: nowrap; /* Ensure content stays on one line */
-    }
+.bottom-line {
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Ensure content stays on one line */
+}
 
-    #clock {
-        margin-right: 1rem;
-        font-size: 0.875rem;
-    }
+#clock {
+    margin-right: 1rem; /* Add space between clock and weather */
+    font-size: 1rem;
+    font-weight: 300;
+}
 
-    #weather {
-        display: flex;
-        align-items: center;
-        font-size: 0.875rem;
-    }
+#weather {
+    display: flex;
+    align-items: center;
+}
 
-    #weather-icon {
-        font-size: 0.875rem;
-        margin-left: 0.5em;
-    }
+#weather-text {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+#weather-icon {
+    font-size: 1rem;
+    margin-left: 0.5em;
+}
+
 
     /* Project Section */
     .project {
