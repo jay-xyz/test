@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             greeting = "Good Evening";
         }
 
-        dayGreetingElement.textContent = `${formattedDate}  👋  ${greeting}`;
+        dayGreetingElement.textContent = `${formattedDate}, ${greeting}`;
     }
 
     function getWeatherIcon(weatherCode) {
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.log('Location being used:', cityName);
 
                     document.getElementById('weather-icon').textContent = icon;
-                    document.getElementById('weather-text').textContent = `${cityName}${temp}°C`;
+                    document.getElementById('weather-text').textContent = `${cityName} ${temp}°C`;
                 } else {
                     throw new Error('Unexpected API response structure');
                 }
