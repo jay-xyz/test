@@ -310,7 +310,7 @@ header {
     .header-text {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
     }
 
     #day-greeting {
@@ -321,12 +321,11 @@ header {
 
     .bottom-line {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         white-space: nowrap;
     }
 
     #clock {
-        margin-right: 1rem;
         font-size: 1rem;
         font-weight: 300;
     }
