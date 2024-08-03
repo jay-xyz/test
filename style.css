@@ -131,7 +131,7 @@ header {
 }
 
 .marquee-content span {
-    font-size: 1.625rem;
+    font-size: 1.875rem;
     color: white;
     font-weight: 300;
     white-space: nowrap;
@@ -272,15 +272,16 @@ header {
 /* Small screens (up to 480px) */
 @media (max-width: 480px) {
     body {
-
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
     
     header,
     .hero-container,
     .project,
     .marquee-content {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        margin-left: 0;
+        margin-right: 0;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
