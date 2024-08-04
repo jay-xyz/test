@@ -396,6 +396,14 @@ header {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
+
+.marquee-content {
+    display: flex;
+    height: 100%;
+    white-space: nowrap; /* Prevents line breaks */
+    animation: marquee 20s linear infinite; /* Animation for scrolling effect */
+    position: relative; /* Needed for the ::before pseudo-element */
+}
     .marquee-content span {
         font-size: 1.65rem;
         padding: 0 15px;
