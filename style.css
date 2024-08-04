@@ -18,42 +18,16 @@ body {
 
 /* Typography */
 h1, h2, h3 {
-    font-size: 3rem;
+    font-size: 1.875rem;
     font-weight: 225;
     line-height: .875;
 }
 
-h1 {
-	gap: 0.5rem; 
-}
 
 /* Color Accents */
 h1 .designer {
     color: #A7B4BE;
     opacity: 50%;
-}
-
-h1 .arrow-container {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border: 1.2px solid #0086F7;
-    border-radius: 94px;
-    height: 1.5rem;
-    width: 2.2rem;
-    box-sizing: border-box;
-    vertical-align: middle; /* Helps with alignment */
-}
-
-h1 .arrow {
-    color: #0086F7;
-    font-size: 0.75rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    line-height: 1; /* Ensures the arrow is vertically centered */
 }
 
 
@@ -215,13 +189,13 @@ header {
 
 .role-container span {
     font-size: 0.875rem;
-    font-weight: 225;
+    font-weight: 300;
     color: #0086F7
 }
 
 /* Description Section */
 .description {
-    font-size: 1.625rem;
+    font-size: 1.25rem;
     margin-bottom: 3rem;
     color: #A7B4BE;
     font-weight: 225;
@@ -319,7 +293,7 @@ header {
     
     /* Typography */
     h1 {
-        font-size: 3.25rem;
+        font-size: 2.25rem;
         font-weight: 225;
         line-height: .875;
         letter-spacing: -.055em;
@@ -345,7 +319,7 @@ header {
     }
 
     #day-greeting {
-        font-size: 1rem;
+        font-size: 1.25rem;
         font-weight: 225;
         margin-bottom: 0.5rem;
     }
@@ -357,7 +331,7 @@ header {
     }
 
     #clock {
-        font-size: 1rem;
+        font-size: 1.25rem;
         font-weight: 225;
     }
 
@@ -367,12 +341,12 @@ header {
     }
 
     #weather-text {
-        font-size: 1rem;
+        font-size: 1.25rem;
         font-weight: 225;
     }
 
     #weather-icon {
-        font-size: 1rem;
+        font-size: 1.25rem;
         margin-left: 0.5em;
     }
 
@@ -383,7 +357,7 @@ header {
 
     .project-title {
         margin-bottom: 0;
-        font-size: 1.25rem;
+        font-size: 1.65rem;
     }
 
     .role-info {
@@ -423,7 +397,7 @@ header {
     margin-bottom: 1.5rem;
 }
     .marquee-content span {
-        font-size: 1.5rem;
+        font-size: 1.65rem;
         padding: 0 15px;
     }
 }
