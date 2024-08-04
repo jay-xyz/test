@@ -311,7 +311,7 @@ header {
     /* Typography */
     h1 {
         font-size: 3.25rem;
-        font-weight: 300;
+        font-weight: 225;
         line-height: .875;
         letter-spacing: -.055em;
     }
@@ -337,7 +337,7 @@ header {
 
     #day-greeting {
         font-size: 1rem;
-        font-weight: 300;
+        font-weight: 225;
         margin-bottom: 0.5rem;
     }
 
@@ -349,7 +349,7 @@ header {
 
     #clock {
         font-size: 1rem;
-        font-weight: 300;
+        font-weight: 225;
     }
 
     #weather {
@@ -359,7 +359,7 @@ header {
 
     #weather-text {
         font-size: 1rem;
-        font-weight: 300;
+        font-weight: 225;
     }
 
     #weather-icon {
