@@ -18,8 +18,8 @@ body {
 
 /* Typography */
 h1, h2, h3 {
-    font-size: 3rem;
-    font-weight: 300;
+    font-size: 2.75rem;
+    font-weight: 225;
     line-height: .875;
 }
 
@@ -66,7 +66,7 @@ header {
 
 #day-greeting {
     font-size: 1.875rem;
-    font-weight: 300;
+    font-weight: 225;
     margin-bottom: 0.5rem;
 }
 
@@ -78,7 +78,7 @@ header {
 
 #clock {
     margin-right: 1rem;
-    font-weight: 300;
+    font-weight: 225;
     font-size: 1.875rem;
     color: #A7B4BE;
     opacity: 50%;
@@ -87,7 +87,7 @@ header {
 #weather {
     display: flex;
     align-items: center;
-    font-weight: 300;
+    font-weight: 225;
     color: #A7B4BE;
     opacity: 50%;
 }
@@ -114,7 +114,7 @@ header {
 /* Marquee Styles */
 .marquee-container {
     background-color: #0086F7; /* Adjust color as needed */
-    height: 80px;
+    height: 50px;
     overflow: hidden;
     position: relative;
     width: 100%; /* Changed from 100vw to 100% */
@@ -131,9 +131,9 @@ header {
 }
 
 .marquee-content span {
-    font-size: 1.875rem;
+    font-size: 1.25rem;
     color: white;
-    font-weight: 300;
+    font-weight: 225;
     white-space: nowrap;
     padding: 0 25px;
     display: flex;
@@ -186,6 +186,7 @@ header {
 
 .role-container span {
     font-size: 0.875rem;
+    font-weight: 225;
     color: #0086F7
 }
 
@@ -194,7 +195,7 @@ header {
     font-size: 1.625rem;
     margin-bottom: 3rem;
     color: #A7B4BE;
-    font-weight: 300;
+    font-weight: 225;
     line-height: 1.4;
 }
 
@@ -385,7 +386,7 @@ header {
     /* Marquee Styles */
 .marquee-container {
     background-color: #0086F7; /* Adjust color as needed */
-    height: 80px;
+    height: 50px;
     overflow: hidden;
     position: relative;
     width: 100%; /* Changed from 100vw to 100% */
