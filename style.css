@@ -47,7 +47,7 @@ h1 .arrow-container {
 
 h1 .arrow {
     color: #0086F7;
-    font-size: 1rem;
+    font-size: 0.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,41 +131,50 @@ header {
     line-height: 1.2;
 }
 
-/* Marquee Styles */
 .marquee-container {
     background-color: #0086F7; /* Adjust color as needed */
     height: 50px;
-    overflow: hidden;
+    overflow: hidden; /* Hide overflow to ensure a clean scroll */
     position: relative;
-    width: 100%; /* Changed from 100vw to 100% */
+    width: 100%; /* Full width */
     margin-top: 3.125rem;
     margin-bottom: 3.125rem;
 }
 
 .marquee-content {
     display: flex;
-    position: absolute;
     height: 100%;
-    animation: marquee 20s linear infinite;
-    padding: 0 calc(50vw - 50%); /* Add padding to align content with other sections */
+    white-space: nowrap; /* Prevents line breaks */
+    animation: marquee 20s linear infinite; /* Animation for scrolling effect */
+    position: relative; /* Needed for the ::before pseudo-element */
+}
+
+.marquee-content::before {
+    content: attr(data-text);
+    position: absolute;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    left: 100%; /* Start after the original content */
+    padding-left: 25px; /* Adjust padding to match original content's padding */
 }
 
 .marquee-content span {
     font-size: 1.25rem;
     color: white;
     font-weight: 225;
-    white-space: nowrap;
-    padding: 0 25px;
+    white-space: nowrap; /* Prevents line breaks */
+    padding: 0 25px; /* Spacing between items */
     display: flex;
-    align-items: center;
+    align-items: center; /* Vertically centers the text */
 }
 
 @keyframes marquee {
     0% {
-        transform: translateX(0);
+        transform: translateX(0); /* Start position */
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%); /* End position for one complete scroll */
     }
 }
 
