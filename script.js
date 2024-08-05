@@ -12,41 +12,33 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateDayGreeting() {
-        const now = timeZone ? new Date(new Date().toLocaleString('en-US', { timeZone })) : new Date();
-        const options = { 
-            weekday: 'long', 
-            day: 'numeric', 
-            month: 'long',
-            year: 'numeric',
-            formatMatcher: 'basic'
-        };
-        
-        const formatter = new Intl.DateTimeFormat('en-US', options);
-        const parts = formatter.formatToParts(now);
-        
-        const formattedDate = parts
-            .map(part => {
-                switch(part.type) {
-                    case 'weekday': return part.value + ' ';
-                    case 'month': return part.value + ' ';
-                    case 'day': return part.value;
-                    default: return '';
-                }
-            })
-            .join('');
+    const now = timeZone ? new Date(new Date().toLocaleString('en-US', { timeZone })) : new Date();
+    const options = { 
+        weekday: 'long', 
+        day: 'numeric', 
+        month: 'long',
+        year: 'numeric',
+        formatMatcher: 'basic'
+    };
+    
+    const formatter = new Intl.DateTimeFormat('en-US', options);
+    const parts = formatter.formatToParts(now);
+    
+    const formattedDate = `${parts.find(part => part.type === 'weekday').value} ${parts.find(part => part.type === 'day').value} ${parts.find(part => part.type === 'month').value}`;
 
-        const hour = now.getHours();
-        let greeting;
-        if (hour < 12) {
-            greeting = "Good Morning";
-        } else if (hour < 18) {
-            greeting = "Good Afternoon";
-        } else {
-            greeting = "Good Evening";
-        }
-
-        dayGreetingElement.textContent = `${formattedDate}, ${greeting}`;
+    const hour = now.getHours();
+    let greeting;
+    if (hour < 12) {
+        greeting = "Good Morning";
+    } else if (hour < 18) {
+        greeting = "Good Afternoon";
+    } else {
+        greeting = "Good Evening";
     }
+
+    dayGreetingElement.textContent = `${formattedDate}, ${greeting}`;
+	
+	}	
 
     function getWeatherIcon(weatherCode) {
         const detailedIconMap = {
