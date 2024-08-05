@@ -70,8 +70,12 @@ header {
     white-space: nowrap;
 }
 
+/* New and modified styles */
+.bottom-line > span {
+    margin-right: 0.25em; /* Add a small space between main elements */
+}
+
 #clock {
-    margin-right: 1rem;
     font-weight: 225;
     font-size: 1.875rem;
     color: #A7B4BE;
@@ -79,8 +83,7 @@ header {
 }
 
 #weather {
-    display: flex;
-    align-items: center;
+    display: inline; /* Change from flex to inline */
     font-weight: 225;
     color: #A7B4BE;
     opacity: 50%;
@@ -88,7 +91,13 @@ header {
 
 #weather-icon {
     font-size: 2rem;
-    margin-left: 0.5em;
+    margin-left: 0.25em; /* Add a small space before the weather icon */
+}
+
+/* Remove any existing margins or paddings that might interfere */
+#weather-text {
+    margin: 0;
+    padding: 0;
 }
 
 /* Hero Section */
